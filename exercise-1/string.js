@@ -1,17 +1,15 @@
 function ucfirst(value) {
-
+    if (typeof value !== "string" || !value) return "";
     let arrayValue = value.split("");
-
     arrayValue[0] = arrayValue[0].toUpperCase();
-
     let newArray = arrayValue.join("");
-
     return newArray;
 }
 
 //ucfirst("hello world");
 
 function capitalize(value) {
+    if (typeof value !== "string" || !value) return "";
     let arrayValue = value.split(" ");
 
     var i = 0;
@@ -28,6 +26,7 @@ function capitalize(value) {
 //capitalize("hello world");
 
 function camelCase(value) {
+    if (typeof value !== "string" || !value) return "";
     let capitalizeValue = capitalize(value);
     let capitalizeArray = capitalizeValue.split(" ");
     return capitalizeArray.join("");
@@ -36,6 +35,7 @@ function camelCase(value) {
 //camelCase("hello world");
 
 function snake_case(value) {
+    if (typeof value !== "string" || !value) return "";
     let newValue = value.toLowerCase();
     let arrayValue = newValue.split(" ");
     return arrayValue.join("_");
@@ -44,6 +44,7 @@ function snake_case(value) {
 //snake_case("hello World");
 
 function leet(value) {
+    if (typeof value !== "string" || !value) return "";
     let arrayValues = value.split("");
     let i = 0;
     while (i < arrayValues.length) {
@@ -56,7 +57,7 @@ function leet(value) {
         } else if (arrayValues[i].toLowerCase() === "o") {
             arrayValues[i] = "0";
         } else if (arrayValues[i].toLowerCase() === "u") {
-            arrayValues[i] = "_";
+            arrayValues[i] = "(_)";
         } else if (arrayValues[i].toLowerCase() === "y") {
             arrayValues[i] = "7";
         }
@@ -90,6 +91,7 @@ function prop_access(object, path) {
 console.log(prop_access(animal, "type.name"));*/
 
 function verlan(value) {
+    if (typeof value !== "string" || !value) return "";
     let arrayValue = value.split(" ");
     let i = 0;
     let reversedArray = [];
@@ -104,6 +106,7 @@ function verlan(value) {
 //console.log(verlan("hello world"));
 
 function yoda(value) {
+    if (typeof value !== "string" || !value) return "";
     let arrayValue = value.split(" ").reverse();
     return arrayValue.join(" ");
 }
@@ -111,7 +114,7 @@ function yoda(value) {
 //console.log(yoda("hello world"));
 
 function vig(value, key) {
-    
+
 }
 
-console.log(vig("hello world"), "salaud");
+console.log(vig("hello world", "salaud"));
